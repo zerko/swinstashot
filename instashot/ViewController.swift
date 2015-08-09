@@ -15,10 +15,12 @@ class ViewController: UIViewController, QBImagePickerControllerDelegate {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "showScreenshotPicker")
+  
+        showScreenshotPicker()
     }
     
     override func viewDidAppear(animated: Bool) {
-        showScreenshotPicker()
+//        showScreenshotPicker()
     }
     
 
@@ -37,11 +39,10 @@ class ViewController: UIViewController, QBImagePickerControllerDelegate {
     }
     
     func qb_imagePickerController(imagePickerController: QBImagePickerController!, didFinishPickingAssets assets: [AnyObject]!) {
-        let previewController = PreviewController()
+        let pc = self.storyboard!.instantiateViewControllerWithIdentifier("preview")
         dismissViewControllerAnimated(true, completion: {
             () -> () in
-            print("Navigating")
-            self.navigationController!.pushViewController(previewController, animated: true)
+            self.navigationController!.pushViewController(pc, animated: true)
         })
         
     }
