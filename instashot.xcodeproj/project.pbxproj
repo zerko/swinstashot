@@ -15,6 +15,8 @@
 		D84589441B76A51F00A4ACC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D84589421B76A51F00A4ACC9 /* LaunchScreen.storyboard */; };
 		D845894F1B76A51F00A4ACC9 /* instashotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845894E1B76A51F00A4ACC9 /* instashotTests.swift */; };
 		D845895A1B76A51F00A4ACC9 /* instashotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84589591B76A51F00A4ACC9 /* instashotUITests.swift */; };
+		D8715E231B76C5830050CFB9 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8715E221B76C5830050CFB9 /* PreviewController.swift */; };
+		D8715E251B76C5FA0050CFB9 /* PreviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8715E241B76C5FA0050CFB9 /* PreviewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D84589551B76A51F00A4ACC9 /* instashotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instashotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D84589591B76A51F00A4ACC9 /* instashotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instashotUITests.swift; sourceTree = "<group>"; };
 		D845895B1B76A51F00A4ACC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8715E221B76C5830050CFB9 /* PreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
+		D8715E241B76C5FA0050CFB9 /* PreviewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 				D84589401B76A51F00A4ACC9 /* Assets.xcassets */,
 				D84589421B76A51F00A4ACC9 /* LaunchScreen.storyboard */,
 				D84589451B76A51F00A4ACC9 /* Info.plist */,
+				D8715E221B76C5830050CFB9 /* PreviewController.swift */,
+				D8715E241B76C5FA0050CFB9 /* PreviewController.xib */,
 			);
 			path = instashot;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8715E251B76C5FA0050CFB9 /* PreviewController.xib in Resources */,
 				D84589441B76A51F00A4ACC9 /* LaunchScreen.storyboard in Resources */,
 				D84589411B76A51F00A4ACC9 /* Assets.xcassets in Resources */,
 				D845893F1B76A51F00A4ACC9 /* Main.storyboard in Resources */,
@@ -330,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8715E231B76C5830050CFB9 /* PreviewController.swift in Sources */,
 				D845893C1B76A51F00A4ACC9 /* ViewController.swift in Sources */,
 				D845893A1B76A51F00A4ACC9 /* AppDelegate.swift in Sources */,
 			);

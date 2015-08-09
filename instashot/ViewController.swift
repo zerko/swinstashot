@@ -14,6 +14,7 @@ class ViewController: UIViewController, QBImagePickerControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "showScreenshotPicker")
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -32,12 +33,16 @@ class ViewController: UIViewController, QBImagePickerControllerDelegate {
         qbPicker.allowsMultipleSelection = true
         qbPicker.showsNumberOfSelectedAssets = true
         
-        print("PRESENTING")
-        
         presentViewController(qbPicker, animated: true, completion: nil)
     }
     
     func qb_imagePickerController(imagePickerController: QBImagePickerController!, didFinishPickingAssets assets: [AnyObject]!) {
+        let previewController = PreviewController()
+        dismissViewControllerAnimated(true, completion: {
+            () -> () in
+            print("Navigating")
+            self.navigationController!.pushViewController(previewController, animated: true)
+        })
         
     }
 
