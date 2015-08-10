@@ -42,7 +42,7 @@ class ViewController: UIViewController, QBImagePickerControllerDelegate {
     func qb_imagePickerController(imagePickerController: QBImagePickerController!, didFinishPickingAssets assets: [AnyObject]!) {
         let selectedAssets = assets as! [PHAsset]
         let pc = self.storyboard!.instantiateViewControllerWithIdentifier("preview") as! PreviewController
-        pc.selectedAssets = selectedAssets
+        pc.setAssets(selectedAssets)
         dismissViewControllerAnimated(true, completion: {
             () -> () in
             self.navigationController!.pushViewController(pc, animated: true)
