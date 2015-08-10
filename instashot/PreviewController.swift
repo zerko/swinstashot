@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Photos
 
-class PreviewController: UIViewController {
+class PreviewController: UICollectionViewController {
+    
+    var selectedAssets: [PHAsset] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("LOADED")
     }
 }

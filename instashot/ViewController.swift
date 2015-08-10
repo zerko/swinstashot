@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 import QBImagePickerController
 
 class ViewController: UIViewController, QBImagePickerControllerDelegate {
@@ -39,7 +40,9 @@ class ViewController: UIViewController, QBImagePickerControllerDelegate {
     }
     
     func qb_imagePickerController(imagePickerController: QBImagePickerController!, didFinishPickingAssets assets: [AnyObject]!) {
-        let pc = self.storyboard!.instantiateViewControllerWithIdentifier("preview")
+        let selectedAssets = assets as! [PHAsset]
+        let pc = self.storyboard!.instantiateViewControllerWithIdentifier("preview") as! PreviewController
+        pc.selectedAssets = selectedAssets
         dismissViewControllerAnimated(true, completion: {
             () -> () in
             self.navigationController!.pushViewController(pc, animated: true)
