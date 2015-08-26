@@ -3,10 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PreviewPickerViewController" customModule="instashot" customModuleProvider="target">
             <connections>
+                <outlet property="previewImage" destination="Lfk-bi-pug" id="OYK-Pk-tx8"/>
+                <outlet property="templatePickerCollectionView" destination="nVx-HX-AYc" id="Q4l-hQ-txb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,14 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This label will help us test autolayout. check out this complicated mess 123" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tx-rh-hEc">
-                    <rect key="frame" x="8" y="264" width="304" height="41"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nVx-HX-AYc">
-                    <rect key="frame" x="0.0" y="440" width="320" height="128"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nVx-HX-AYc">
+                    <rect key="frame" x="0.0" y="408" width="320" height="160"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PeD-lO-j9U">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -30,12 +27,20 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lfk-bi-pug">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="408"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="3tx-rh-hEc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Agh-V0-1Pe"/>
-                <constraint firstAttribute="trailing" secondItem="3tx-rh-hEc" secondAttribute="trailing" constant="8" id="VGM-df-8xW"/>
-                <constraint firstItem="3tx-rh-hEc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="e29-OR-w4b"/>
+                <constraint firstAttribute="trailing" secondItem="Lfk-bi-pug" secondAttribute="trailing" id="4zv-DV-uZk"/>
+                <constraint firstAttribute="trailing" secondItem="nVx-HX-AYc" secondAttribute="trailing" id="6Rb-51-1sU"/>
+                <constraint firstItem="nVx-HX-AYc" firstAttribute="top" secondItem="Lfk-bi-pug" secondAttribute="bottom" id="Smz-sM-NH4"/>
+                <constraint firstItem="Lfk-bi-pug" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Znu-vC-tEJ"/>
+                <constraint firstItem="Lfk-bi-pug" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jxw-xi-GA2"/>
+                <constraint firstItem="nVx-HX-AYc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jzI-Xn-zjo"/>
+                <constraint firstAttribute="bottom" secondItem="nVx-HX-AYc" secondAttribute="bottom" id="tbt-Qx-hqT"/>
+                <constraint firstItem="Lfk-bi-pug" firstAttribute="width" secondItem="nVx-HX-AYc" secondAttribute="height" multiplier="4:2" id="zfx-bM-7lw"/>
             </constraints>
             <point key="canvasLocation" x="554" y="485"/>
         </view>
