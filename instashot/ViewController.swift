@@ -40,14 +40,14 @@ class ViewController: UIViewController, QBImagePickerControllerDelegate {
     }
     
     func qb_imagePickerController(imagePickerController: QBImagePickerController!, didFinishPickingAssets assets: [AnyObject]!) {
-//        let selectedAssets = assets as! [PHAsset]
+        let selectedAssets = assets as! [PHAsset]
 //        let pc = self.storyboard!.instantiateViewControllerWithIdentifier("preview") as! PreviewController
         
         
         let vc = PreviewPickerViewController(nibName: "PreviewPickerViewController", bundle: nil);
         
         
-//        pc.setAssets(selectedAssets)
+        vc.setAssets(selectedAssets)
         dismissViewControllerAnimated(true, completion: {
             () -> () in
             self.navigationController!.pushViewController(vc, animated: true);
